@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <title>Ζαχαροπλαστείο</title>
+ <link rel="stylesheet" href="style.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+ </head>
+ <body>
+     <div id="slideout-menu">
+	    <ul>
+			   <li>
+			     <a href="#">Αρχική</a>
+				 </li>
+				 <li>
+				   <a href="#">Προϊόντα</a>
+				   </li>
+				   <li>
+				   <a href="#">Επικοινωνία</a>
+				   </li>
+				  <li>
+				    <input type="text" placeholder="Search Here">
+				   </li>
+				   </ul>
+	 </div>
+    <nav>
+	    <div id="sokolatini">
+		  <a href="doctype.html">
+		    <img src="sokolatini.png" alt="Το Ζαχαροπλαστείο" style="max-height: 80px;">
+			</a>
+			</div>
+			<div id="menu-icon">
+			   <i class="fas fa-bars"></i>
+			   </div>
+			   <ul>
+			   <li>
+			     <a class="active" href="doctype.html">Αρχική</a>
+				 </li>
+				 <li>
+				   <a href="proionta.html">Προϊόντα</a>
+				   </li>
+				   <li>
+				   <a href="epikinonia.html">Επικοινωνία</a>
+				   </li>
+				   <li>
+				    <!-- Button to open the modal login form -->
+<button class="login-btn-nav" onclick="document.getElementById('id01').style.display='block'">
+<i class="fas fa-user"></i>Login</button>
+</li>
+<li>
+<button class="login-btn-nav" onclick="document.getElementById('id02').style.display='block'">
+<i class="fas fa-user-plus"></i> Register
+    </button>
+</li>
+				   <li>
+				    <a href="#" id="search-icon">
+					<i class="fas fa-search"></i>
+				  
+				   </a>
+				   </li>
+				   </ul>
+			</nav>
+			<!-- The Modal -->
+<div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'"
+class="close" title="Close Modal">&times;</span>
+
+  <!-- Modal Content -->
+  <form class="modal-content animate" action="action_page.php" method="post">
+    <div class="imgcontainer">
+      <img src="img_avatar2.png" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+
+      <button type="submit" class="submit-btn">Login</button>
+       <label> <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>
+<!-- Modal register -->
+<div id="id02" class="modal">
+    <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+    
+    <form class="modal-content animate" action="page.php" method="POST">
+        <div class="container">
+            <h2 style="text-align:center; color:#3d1f16;">Εγγραφή νέου χρήστη</h2>
+            <hr>
+            
+            <label><b>Όνομα</b></label>
+            <input type="text" name="firstname" required>
+
+            <label><b>Επώνυμο</b></label>
+            <input type="text" name="lastname" required>
+
+            <label><b>Username</b></label>
+            <input type="text" name="username" required>
+
+            <label><b>Password</b></label>
+            <input type="password" name="passwordfirst" required>
+
+            <label><b>Retype Password</b></label>
+            <input type="password" name="passwordsecond" required>
+
+            <label><b>Φύλο</b></label><br>
+            <input type="radio" name="gender" value="male"> Άνδρας 
+            <input type="radio" name="gender" value="female"> Γυναίκα 
+            <br><br>
+
+            <label>
+                <input type="checkbox" name="agreeterms" value="1" required> Συμφωνώ με τους όρους χρήσης
+            </label>
+
+            <button type="submit" class="submit-btn">Εγγραφή</button>
+        </div>
+        
+        <div class="container" style="background-color:#f1f1f1; border-radius: 0 0 15px 15px;">
+            <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Ακύρωση</button>
+        </div>
+    </form>
+</div>
+			<div id="searchbox">
+			<input type="text" placeholder="Search Here">
+			</div>
+			<div id="banner">
+			</div>
+			
+			<main>
+			 <a href="#">
+			    <h2 class="section-heading">Πληροφορίες</h2>
+				</a>
+				
+				<section>
+				<div class="card">
+				<div class="card-image">
+				<a href="#">
+				  <img src="GATEAUX-slider-interior1.jpg" alt="Card image">
+				  </a>
+				  </div>
+				  
+				  <div class="card-description">
+				  <a href="#">
+				  <h3>Το εσωτερικό του Ζαχαροπλαστείου μας</h3>
+				  </a>
+				  <p>
+				    Ο εσωτερικός χώρος του ζαχαροπλαστείου Σοκολατίνι συνδυάζει την κλασική κομψότητα με μια ζεστή, φιλόξενη ατμόσφαιρα που σε προδιαθέτει για ένα μοναδικό γαστρονομικό ταξίδι. Οι φωτεινές, μαρμάρινες βιτρίνες αναδεικνύουν την τέχνη μας, φιλοξενώντας μια πολύχρωμη ποικιλία από χειροποίητα μακαρόν, εκλεκτά σοκολατάκια και φρεσκοψημένα γλυκίσματα. Ο προσεγμένος φωτισμός από τα ιδιαίτερα κρεμαστά φωτιστικά και το περίτεχνο δάπεδο με τα γεωμετρικά μοτίβα προσδίδουν στον χώρο μια αίσθηση πολυτέλειας, κάνοντας κάθε σας επίσκεψη μια ολοκληρωμένη εμπειρία αισθήσεων.
+					</p>
+					<a href="#" class="btn-readmore">Διαβάστε περισσότερα</a>
+					</div>
+				  </div>
+				  
+				  <div class="card">
+				<div class="card-image">
+				<a href="#">
+				  <img src="prosopiko1.jpg" alt="Card image">
+				  </a>
+				  </div>
+				  
+				  <div class="card-description">
+				  <a href="#">
+				  <h3>Η ομάδα μας</h3>
+				  </a>
+				  <p>Οι άνθρωποί μας είναι η καρδιά του <strong>Σοκολατίνι</strong>, δουλεύοντας καθημερινά με μεράκι και τις καλύτερες πρώτες ύλες.</p>
+					<a href="#" class="btn-readmore">Διαβάστε περισσότερα</a>
+					</div>
+					</div>
+				  </section>
+				  
+				  <h2 class="section-heading">Τα Best Sellers μας</h2>
+				  <section id="products-grid">
+				  <div class="card">
+				<div class="card-product">
+				<a href="#">
+				  <img src="sokolata.jpg" alt="Τούρτα Σοκολάτα">
+				  </a>
+				  </div>
+				  <div class="card-description">
+				    <h3>Τούρτες</h3>
+					<p>Εντυπωσιακά σχέδια και γεύσεις για κάθε σας εκδήλωση.</p>
+					</div>
+					</div>
+				    <div class="card">
+					<div class="card-product">
+					<img src="profiterol.jpg" alt="Προφιτερόλ">
+					</div>
+					<div class="card-description">
+                     <h3>Προφιτερόλ</h3>
+                      <p>Η απόλυτη σοκολατένια εμπειρία με την υπογραφή μας.</p>
+                    </div>
+                    </div>
+					<div class="card">
+					<div class="card-product">
+					<img src="siropiasta.jpg" alt="Σιροπιαστά">
+					</div>
+					<div class="card-description">
+                      <h3>Σιροπιαστά</h3>
+                       <p>Παραδοσιακές συνταγές που ξυπνούν αναμνήσεις.</p>
+                     </div>
+					 </div>
+					 </section>
+					
+				  <section id="section-best sellers">
+				    <p>Στην κορυφή των προτιμήσεών σας βρίσκονται οι δημιουργίες που έχουν γίνει πλέον σήμα κατατεθέν του Σοκολατίνι. Οι τούρτες μας, φτιαγμένες με αφράτο παντεσπάνι και πλούσιες στρώσεις από φρέσκια κρέμα, αποτελούν τον πρωταγωνιστή κάθε γιορτής σας, ενώ το ξακουστό μας προφιτερόλ μαγεύει με την ισορροπία ανάμεσα στα τραγανά σου και τη βελούδινη, ζεστή σοκολάτα. Τέλος, για τους λάτρεις της παράδοσης, τα σιροπιαστά μας μοσχοβολούν φρέσκο βούτυρο και είναι ποτισμένα με το τέλειο σιρόπι, φέρνοντας στο πιάτο σας τη γεμάτη γεύση της αυθεντικής ζαχαροπλαστικής τέχνης.</p>
+					<a href="#" class="btn-readmore">Δείτε περισσότερα</a>
+					</section>
+					
+					<footer>
+					  <div id="left-footer">
+					  <h3>Χρήσιμοι Σύνδεσμοι</h3>
+					  <p>
+					    <ul>
+						  <li>
+						  <a href="#">Αρχική</a>
+						  </li>
+						  <li>
+						  <a href="#">Προϊόντα</a>
+						  </li>
+						  <li>
+						  <a href="#">Επικοινωνία</a>
+						  </li>
+						  </ul>
+						  </p>
+						  </div>
+						  
+						  <div id="right-footer">
+						  <p>Ανοιχτά καθημερινά: 09:00 - 22:00</p>
+						  <h3>Follow us on</h3>
+						  <div id="social-media-footer">
+						  <ul>
+						   <li>
+						   <a href="#">
+						   <i class="fab fa-facebook"></i> Επισκεφθείτε το Σοκολατίνι στο Facebook
+						   </a>
+						   </li>
+						   </ul>
+						   </div>
+						   </div>
+						   </footer>
+				  </main>
+				  <script src="main.js"></script>
+ </body>
+ </html>

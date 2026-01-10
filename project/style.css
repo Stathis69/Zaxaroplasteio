@@ -1,0 +1,591 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{	
+color: #3d1f16; 
+font-family: 'Roboto', sans-serif;
+padding-top:72px;
+}
+h2,h3, .section-heading{
+	font-family: 'Playfair Display', serif;
+	color: #4b2c20;
+	letter-spacing: 1px;
+}
+p{
+	line-height: 1.5;
+}
+
+main{
+	padding:20px;
+	margin: 0 auto;
+}
+
+/*Inputs */
+
+input,textarea{
+	height:32px;
+	padding:0 16px;
+	font-family:'Roboto Condensed',sans-serif;
+	font-size:20px;
+	border:none;
+	box-shadow: inset 8px 3px 18px -4px rgba(0,0,0,0.5);
+}
+
+input:focus,
+textarea:focus{
+	outline: none;
+	border: 2px solid #4b2c20;
+	box-shadow: 0 0 5px rgba(75, 44, 32, 0.3);
+}
+
+/* Banner */
+
+#banner{
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('banner.png');
+	background-attachment: fixed;
+	background-size: cover;
+	background-position:center;
+	background-repeat: no-repeat;
+	background-blend-mode:overlay;
+	color: white;
+	text-align: center;
+}
+
+#searchbox{
+	position: fixed;
+	right: 0px;
+	top: 24px;
+	width: 500px;
+	background: white;
+	padding: 10px;
+	border-radius: 5px;
+	box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+	transition: all 0.4s ease;
+	opacity: 0;
+	pointer-events: none;
+	z-index: 90;
+}
+
+#searchbox input {
+height: 48px;
+width: 100%;
+}
+
+/* Navigation */
+
+nav{
+	height:72px;
+	background: #202125;
+	width:100%;
+	margin:0;
+	position:fixed;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size:20px;
+	display:flex;
+	justify-content: space-between;
+	padding:0 40px;
+	box-sizing: border-box;
+	z-index: 1000;
+	top:0;
+	left:0;
+	align-items: center;
+}
+
+nav a{
+	padding:0 32px;
+	color: #eee;
+	transition: 0.4s;
+	text-decoration: none;
+	display: inline-block;
+}
+
+nav a:hover{
+	color: #e67e22;
+	transform: translateY(-2px);
+}
+
+nav ul{
+	display: flex;
+	list-style: none;
+	justify-content: space-around;
+	align-items: center;
+	height:100%;
+	margin:0;
+	padding:0;
+}
+.active{
+	color: #e67e22;
+	font-weight: bold;
+	border-bottom: 2px solid #e67e22;
+	padding-bottom: 5px;
+}
+
+#sokolatini img{ 
+	height: 72px;
+	width: auto;
+	padding: 0 16px;
+	transition: 0.4s;
+	display:block:
+}
+
+#sokolatini img:hover{
+	transform: scale(1.05);
+	cursor:pointer;
+}
+
+#menu-icon{
+	height: 100%;
+	font-size:28px;
+	padding:0 16px;
+	color: #eee;
+	display: none;
+	align-items: center;
+	cursor:pointer;
+}
+
+/* Search Icon */
+
+#search-icon{
+	color: white;
+	padding: 0 32px;
+	cursor: pointer;
+	transition: 0.4s;
+}
+
+#search-icon:hover{
+	color: #e67e22;
+	transform: scale(1.2);
+}
+
+/* Slideout Menu */
+#slideout-menu{
+	display:none;
+	background: #2d3436;
+	z-index: 100;
+	position: fixed;
+	transition:0.4s ease;
+	margin-top:72px;
+	width:100%;
+	text-align:center;
+	opacity:0;
+	pointer-events:none;
+}
+
+#slideout-menu ul{
+	list-style:none;
+	padding: 0 32px;
+}
+
+#slideout-menu ul li{
+	padding: 8px;
+}
+
+#slideout-menu a{
+	font-family: "Roboto Condensed",sans-serif;
+	color:white;
+}
+
+slideout-menu imput{
+	width: 85%;
+	padding:8px;
+	font-family: "Roboto Condensed",sans-serif;
+	font-size: 20px;
+	text-align: center;
+}
+
+/* Sections */
+
+section{
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+.section-heading{
+	font-size: 32px;
+	font-family: 'Roboto Condensed', sans-serif;
+	color: #3d1f16;
+	border-left: 3px solid #3d1f16;
+	border-right: 3px solid #3d1f16;
+	transition: all 0.4s;
+	display: inline-block;
+	padding: 4px 32px;
+	text-transform: uppercase;
+}
+
+.section-heading:hover{
+	padding: 4px 48px;
+	background: #FFEBCD;
+	color: #3d1f16;
+	border-left: 3px solid #e67e22;
+	border-right: 3px solid #e67e22;
+}
+
+/* Card */
+
+.card-image{
+	transition: 0.4s;
+}
+
+.card-image:hover{
+	box-shadow: 0 10px 6px -6px #777;
+}
+
+.card-product{
+	transition: 0.4s;
+	background: white;
+	border-radius: 12px;
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+
+.card-product:hover{
+	box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+	transform: translateY(-5px);
+}
+
+.card .card-description{
+	padding: 15px;
+	text-align: center;
+}
+
+/* Button Read more */
+
+.btn-readmore{
+	padding: 10px 28px;
+	border: 2px solid #3d1f16;
+	color: white;
+	font-family: 'Roboto Condensed', sans-serif;
+	text-transform: uppercase;
+	transition:all 0.4s;
+	display: inline-block;
+	margin: 24px;
+    border-radius: 4px;
+	text-decoration: none;
+	font-weight:bold;
+	cursor:pointer;
+	background:#e67e22;
+}
+
+.btn-readmore:hover{
+	background: #3d1f16;
+	color: #FFEBCD;
+	border-color: #e67e22;
+	transform: scale(1.05);
+}
+
+/* Footer */
+
+footer{
+	background: #1a1a1a;
+	padding:40px 20px;
+	color: #eee;
+	display: flex;
+	flex-wrap: wrap;
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+footer a{
+	color:white;
+	text-decoration:none;
+	transition:0.3s;
+}
+
+footer a:hover {
+	color:#e67e22;
+}
+
+footer #left-footer{
+	flex: 1;
+	border-right: 1px solid #444;
+	padding-left: 32px;
+}
+
+footer #left-footer ul{
+	padding: 0;
+	list-style: none;
+	line-height:2;
+}
+
+footer #right-footer{
+	flex:1;
+	padding:8px;
+	text-align:center;
+	display: flex;
+	flex-direction: column;
+    justify-content: center;
+}
+
+footer #social-media-footer a .fa-facebook{
+    color: white;
+	transition: 0.4s;
+	}
+	
+footer #social-media-footer ul{
+	display: flex;
+	list-style:none;
+	justify-content:center;
+	padding:0;
+}
+
+footer #social-media-footer ul li{
+	font-size:48px;
+	padding:16px;
+	transition:0.4s;
+}
+
+footer #social-media-footer ul li:hover{
+	transform: scale(1.2);
+}
+
+footer #social-media-footer a:hover .fa-facebook {
+	color: #3b5998;
+}
+
+/* Proionta page */
+.page-heading {
+    text-align: center;
+    padding: 40px 0;
+    font-family: 'Playfair Display', serif;
+    color: #3d1f16;
+}
+/* Login form */
+/* The Modal (background) */
+.login-btn-nav{
+	background: #e67e22;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: inherit;
+    transition: 0.3s;
+	display:inline-block;
+}
+.login-btn-nav:hover {
+    background: #3d1f16;
+}
+.submit-btn {
+    width: 100%;
+    background-color: #e67e22;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.submit-btn:hover {
+    background-color: #3d1f16;
+}
+
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 10000;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.6);
+	overflow: hidden;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fdfbf7;
+	margin: 10vh auto;
+	padding: 20px;
+	border-radius: 15px;
+	width: 90%;
+	max-width: 400px;
+	position: relative;
+	box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+}
+
+.modal-content :hover{
+	background-color: #3d1f16;
+}
+
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+
+img.avatar {
+    width: 120px; 
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* The Close Button */
+.close {
+  /* Position it in the top right corner outside of the modal */
+  position: absolute;
+  right: 15px;
+  top: 5px;
+  color: #3d1f16;
+  transition: 0.3s;
+}
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Close button on hover */
+.close:hover,
+.close:focus {
+  color: #e67e22;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)}
+  to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+  from {transform: scale(0)}
+  to {transform: scale(1)}
+}
+
+.modal-content input[type="text"], 
+.modal-content input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Form styles */
+
+
+/* Media Queries */
+
+@media (max-width: 900px){
+	nav ul{
+		display:none;
+	}
+	
+	#menu-icon{
+		display:flex;
+	}
+	
+	#slideout-menu{
+		 display:block; 
+	}
+	
+	#searchbox{
+		display: none;
+	}
+	
+	#search-icon{
+		display:flex;
+		padding: 0 15px;
+	}
+}
+
+@media (max-width: 719px){
+	main{
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 10px;
+	}
+	#banner{
+		height: 50vh;
+		background-attachment: scroll;
+	}
+	
+	.card .card-image img{
+		width:90%;
+		margin: 15px 0;
+}
+.card
+.card-product img{
+	width:100%;
+	height: auto;
+	display: block;
+}
+}
+
+@media (max-width: 600px){
+	main{
+		width:100%;
+		padding: 5px;
+	}
+	
+	#banner{
+		height: 50vh;
+		background-attachment: scroll;
+	}
+	
+	.card{
+		text-align: center;
+	}
+	
+	#sokolatini img{
+		max-height: 60px;
+		padding: 0;
+	}
+}
+
+@media(min-width:720px){
+	main{
+		width:90%;
+		margin: 0 auto;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 30px;
+	}
+	
+	.card{
+		width:45%;
+		margin: 10px;
+	}
+	
+	.card .card-image img{
+		width: 100%;
+		height: auto;
+        display: block;
+	}
+	
+	.card-product{
+		width: calc(45% - 15px);
+		margin-bottom: 0;
+	}
+	
+	.card .card-product img{
+		width: 100%;
+		height: 250px;
+		object-fit: cover;
+        display: block;
+	}
+}
